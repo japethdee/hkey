@@ -2,12 +2,15 @@
   "name": "hkey",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://japethdee.github.io/hkey",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tanstack/react-table": "^8.21.2",
