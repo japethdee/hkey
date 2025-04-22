@@ -14,7 +14,7 @@ import SettingsPage from './pages/SettingsPage.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/hkey">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/create-account" element={<CreateAccount />} />
