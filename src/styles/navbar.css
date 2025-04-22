@@ -1,0 +1,239 @@
+.navbar-container {
+    width: 100%;
+    height: 75px;
+    top: 0;
+    position: sticky;
+    z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  height: 100%;
+  box-shadow: 0px 8px 10px -8px rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+.logo {
+  margin-left: .5%;
+  background-image: url("../../assets/logo3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 90%;
+  width: 25%;
+}
+
+.top-line {
+    height: 10px;               /* Thickness of the line */
+    background-color: #ffea00;    /* Color of the line */
+    width: 100%;                /* Full width across the page */
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+  height: 100%;
+}
+
+.nav-buttons button {
+    background: none;
+    border: none;
+    font-size: 15px;
+    font-weight:bold;
+    font-family: 'Segoe UI';
+    cursor: pointer;
+    color: #000000;
+    width: auto;
+}
+
+.nav-buttons button:hover {
+    background: #9387003b;
+    border-radius: 1px;
+}
+
+.nav-buttons button:focus {
+    color: #006e00;
+    border-radius: 1px;
+}
+
+.login-button {
+    background: #008600;
+    color: white;
+    padding: 8px 15px;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 6%;
+}
+
+.login-button:hover {
+    background: #006e00;
+}
+
+.nav-buttons2 {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-left: auto;
+  height: 100%;
+  width: 70%;
+  padding-right: 1%;
+}
+
+.nav-buttons2 button:hover {
+    background: #ffea003b;  /*#9387003b;*/
+    border-radius: 1px;
+}
+
+.nav-buttons2 button:focus {
+    background: #ffea005e;  /*#9387003b;*/
+    border-radius: 1px;
+}
+
+.nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 8%;
+}
+
+.nav-item button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-divider {
+    background-color: #cfcfcf;
+    width: 2px;
+    margin: 10px 0px;
+    border-radius: 2px;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8%;
+    height: 100%;
+    flex-direction: column;
+    gap: 2.5px;
+    padding: 0;
+}
+  
+.nav-caption {
+    font-size: 13px;
+    color: rgb(36, 36, 36);
+}
+  
+.nav-button:hover .nav-caption {
+    color: black;
+}
+  
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1px;
+    z-index: 10;
+    min-width: 150px;
+}
+
+.dropdown-menu2 {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    min-width: 150px;
+    border-radius: 1px;
+}
+  
+.dropdown-menu button,.dropdown-menu2 button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 13px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 1px;
+}
+  
+.dropdown-menu button:hover, .dropdown-menu2 button:hover {
+    background-color: #f0f0f0;
+}
+
+.logout {
+    color: red;
+    font-weight: 500;
+}
+  
+.notification-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 1px;
+    width: 250px;
+    z-index: 1;
+    padding: 10px;
+}
+
+.notification-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #ddd;
+}
+
+.notification-dropdown li {
+    padding: 6px 0;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #ddd;
+}
+
+.notification-dropdown li:hover {
+    background-color: #f5f5f5;
+}
+
+.active-tab {
+    background: #ffea008b !important; /*fff9ba b4ea9b*/
+    border-radius: 1px;
+    color: white !important;
+    font-weight: bolder;
+    border-radius: 1px;
+    padding: 10px;
+    transition: background 0.3s ease-in-out;
+}

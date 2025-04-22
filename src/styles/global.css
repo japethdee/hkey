@@ -1,0 +1,69 @@
+/* ✅ Universal Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, #root {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI';
+    color: #000000;
+    background-color: #F5F5F5; /* Light background */
+    overflow-x: hidden;
+}
+
+/* ✅ Buttons */
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:focus {
+    opacity: 0.9;
+    border: none;
+    outline: none;
+}
+
+/* ✅ Links */
+a {
+    color: #004aad;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3387f4;
+}
+
+/* ✅ Fix Logo Hover */
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+/* ✅ Keyframes */
+@keyframes logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ✅ Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #242424;
+        color: rgba(255, 255, 255, 0.87);
+    }
+
+    a:hover {
+        color: #747bff;
+    }
+
+    button {
+        background-color: #1a1a1a;
+    }
+}

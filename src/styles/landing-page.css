@@ -1,0 +1,226 @@
+.container {
+  display: flex;
+  height: 100vh;
+  max-width: 100vw;
+  width: 100vw;
+}
+  
+.login-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-image: url('../assets/backdrop-green1.png');
+  background-size: cover;
+  position: fixed;
+  height: 100vh;
+  z-index: 11; /* ✅ ENSURES IT OVERLAYS ABOVE EVERYTHING */
+  right: 0; /* ✅ PANEL NOW APPEARS FROM THE RIGHT */
+  opacity: 0;
+  transform: scale(0.95); /* Optional slight zoom effect */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none; /* Prevent interaction when hidden */
+  box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.2); /* ✅ SHADOW FOR OVERLAY EFFECT */
+}
+
+.login-panel.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto; /* Enable interaction */
+}
+
+/* FOR LOGIN PANEL TO SLIDE IN FROM THE RIGHT 
+
+.login-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(0,110,0,0.95);
+  /*background-image: url('./assets/border.png');
+  position: fixed;
+  height: 100vh;
+  z-index: 3; /* ✅ ENSURES IT OVERLAYS ABOVE EVERYTHING
+  right: 0; /* ✅ PANEL NOW APPEARS FROM THE RIGHT
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.2); /* ✅ SHADOW FOR OVERLAY EFFECT
+}
+
+.login-panel.active {
+  transform: translateX(0);
+}
+
+*/
+
+.closer {
+  position: relative;
+  display: flex;
+  margin-bottom: auto;
+  margin-right: 1%;
+  align-self: flex-end;
+  visibility: hidden;
+  z-index: 4; /* ✅ ENSURES IT OVERLAYS ABOVE EVERYTHING */
+}
+
+.close-button {
+  position:relative;
+  background: none;
+  color: #9CD880;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: bold;
+  height: 25%;
+}
+
+.close-button:hover {
+  color: #003e00;
+}
+
+.login-panel.active .closer {
+  visibility: visible;
+  opacity: 1;
+}
+  
+.login-box {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: absolute;
+  height: 55%;
+  width: 20%;
+  display: flex;          /* Enable Flexbox */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;    /* Center the logo horizontally */
+  justify-content: flex-start; /* Align content at the top */
+}
+  
+.logoBox {
+  background-image:url('../assets/logo.png');
+  background-position: center;     /* Center the logo */
+  background-size: contain;        /* Scale the logo without cropping */
+  background-repeat: no-repeat;
+  width: 90%;       /* Adjust the logo width relative to the login-box */
+  height: 70%;
+}
+  
+.login-text {
+  padding: 0;
+  font-weight: bolder;
+  color: #008600;
+  margin-bottom: 1%;
+  margin-top: 5%;
+}
+  
+.login-box input {
+  display: block;
+  width: 100%;
+  margin-bottom: 5%;
+  margin-top: 0%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: rgb(245, 245, 245)
+}
+
+.specialtext1 {
+  padding: 0;
+  font-weight: 100;
+  color: #004aad;
+  margin-bottom: 0%;
+  font-size: x-small;
+  display: block;
+  margin-left: auto;
+  width: fit-content;
+  cursor: pointer;
+}
+  
+.specialtext2 {
+  padding: 0;
+  font-weight: 100;
+  color: black;
+  margin-bottom: 0%;
+  font-size: small;
+}
+
+.specialtext2 a {
+  color: #004aad;
+  cursor: pointer;
+}
+
+.specialtext2 a:hover {
+  color: #3387f4;
+}
+
+.login-box button {
+  background: #008600;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 8%;
+}
+
+.login-box button:hover {
+  background: #006e00;
+}
+
+.main-panel {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 0px;
+  transition: none; /* Removes transition effect */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 2;
+}
+  
+.overlay.active {
+  display: block;
+}
+
+.splash-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/backdrop-green1.png');
+  background-color: #003e00;
+  width: 100%;
+  background-size: cover;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-image {
+  max-width: 80%;
+  animation: fadeIn .75s ease-in-out, fadeOut .75s ease-in-out 2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.95); }
+}
