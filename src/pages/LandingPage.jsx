@@ -58,7 +58,7 @@ const LandingPage = () => {
           <button onClick={handleLogin}>Login</button>
           <div className="create-account-box"
             ><h2 className="specialtext2">
-              No account yet? <a onClick={() => window.location.href = "/create-account"}>Join us!</a>
+              No account yet? <a onClick={() => navigate("/create-account")}>Join us!</a>
             </h2>
 
           </div>
