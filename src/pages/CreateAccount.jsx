@@ -4,8 +4,14 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from "../components/Navbar";
 import { Eye, EyeOff } from "lucide-react";
 import splash from '../assets/welcome.png';
+import { motion } from "framer-motion";
 
 const CreateAccount = () => {
+  const pageVariants = {
+      initial: { opacity: 0, y: 0 },
+      animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+      exit: { opacity: 0, y: 0, transition: { duration: 0.5 } }
+  };
   const navigate = useNavigate();  
 
   const [showSplash, setShowSplash] = useState(false);
@@ -56,7 +62,7 @@ const CreateAccount = () => {
   };
 
   return (
-    <div className="create-account-container">
+    <motion.div  initial="initial" animate="animate" exit="exit" variants={pageVariants} className="create-account-container">
       <Navbar type="create" />
       {/* Create Account Form */}
       <div className="create-account-form">
@@ -198,7 +204,7 @@ const CreateAccount = () => {
           <img src={splash} alt="Splash Screen" className="splash-image" />
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
